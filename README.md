@@ -11,4 +11,6 @@ The pipeline is as follows:
 2.  Using `thrust::stable_sort_by_key`, find the sorted list of circles that each bin contains (preserves render ordering)
 3.  Render each bin on its own thread by looking through each pixel and sequentially checking if it lies within any of the bin's circles
 
+Possible improvements: Do the first two steps for only small enough sized circles to heavily reduce time used during these steps. Sufficiently sized circles are always checked per pixel in each bin.
+
 
